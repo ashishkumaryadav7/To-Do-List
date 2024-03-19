@@ -1,13 +1,11 @@
 $(document).ready(function(){
-    $('#input-task').hover(function(){
-        $(this).animate({
-            width:'85%'
+    $('#input-task').click(function(){
+        $(this).css({
+        'width': '85%',
+        'box-shadow':'none',
+        'border-radius': '15px',
+        'margin-top': '2px'
         },1000);
     });
-    // $('#input-task').mouseout(function () { 
-    //     $(this).animate({
-    //         width:'70%'
-    //     },1000);
-    // });
-    $('#input-task').unbind('hover');
+    
 });

@@ -30,7 +30,9 @@
     transform: translateX(-50%);
     border: none;
     outline: none;
+    padding: 5px;
     box-shadow: 2px 5px 15px rgba(0,0,0,0.4);
+    transition: all 1s;
 }
 #add{
     height: 50px;
