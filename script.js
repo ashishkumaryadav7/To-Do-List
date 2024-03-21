@@ -1,11 +1,16 @@
 $(document).ready(function(){
-    $('#input-task').click(function(){
-        $(this).css({
-        'width': '85%',
-        'box-shadow':'none',
-        'border-radius': '15px',
-        'margin-top': '2px'
-        },1000);
+    $('#input-task').change(function(){
+        var input = $(this).val();
+        $('#listOfTask').append('<li>'+input+'<i class="fa-solid fa-check"></i><i class="fa-solid fa-trash"></i> </li>');
+        $(this).val('');
     });
+
+    $('ul').on('click','.fa-trash',function () { 
+        $(this).parent('li').fadeOut(300);
+     });
+
+     $('ul').on('click','.fa-check',function () { 
+        $(this).parent('li').toggleClass('checked');
+     });
     
 });

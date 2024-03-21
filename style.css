@@ -20,10 +20,10 @@
 }
 #input-task{
     height: 50px;
-    width: 70%;
+    width: 85%;
     margin-top: 5px;
     text-align: center;
-    border-radius: 30px;
+    border-radius: 15px;
     background-color: #90cbe4;
     position: absolute;
     left: 50%;
@@ -31,9 +31,10 @@
     border: none;
     outline: none;
     padding: 5px;
-    box-shadow: 2px 5px 15px rgba(0,0,0,0.4);
+    box-shadow: 1px 2px 5px rgba(0,0,0,0.4);
     transition: all 1s;
 }
+
 #add{
     height: 50px;
     width: 50px;
@@ -55,12 +56,45 @@
     align-items: center;
     z-index: 100;
 }
-#add:hover{
-    box-shadow: none;
-    font-size: 38px;
-    border: 5px solid;
-    color: cadetblue;
-    background: rgb(204, 200, 200);
+
+.notesList{
+    height: 351px;
+    border-radius: 5px;
+    width: 93%;
+    margin-left: 11px;
+    margin-top: 54px;
+    overflow:scroll;
+  overflow-x: hidden;
 }
-/*background: #c7b198;
-    background: #a7bcb9;*/
+.notesList::-webkit-scrollbar{
+    display: none;
+}
+#listOfTask{
+    list-style: none;
+}
+ul li{
+    background: #a7bcb9;
+    padding: 12px;
+    border-radius: 15px;
+    margin-top: 5px;
+    overflow: hidden;
+    position: relative;
+}
+.fa-check , .fa-trash{
+    position: absolute;
+    cursor: pointer;
+}
+.fa-check{
+    right: 40px;
+    color: green;
+}
+.fa-trash{
+    right: 15px;
+    color: red;
+}
+
+.checked{
+    text-decoration: line-through;
+    background: lightgreen;
+    transition: 1s;
+}
