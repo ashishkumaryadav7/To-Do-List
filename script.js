@@ -6,7 +6,7 @@ $(document).ready(function(){
     });
 
     $('ul').on('click','.fa-trash',function () { 
-        $(this).parent('li').fadeOut(400);
+        $(this).parent('li').remove().fadeOut(400);
      });
 
      $('ul').on('click','.fa-check',function () { 
